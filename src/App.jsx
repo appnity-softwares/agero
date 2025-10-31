@@ -1,11 +1,14 @@
-import NavBar from './components/NavBar.jsx'
+import Hero from "./components/hero"
+import Navbar from "./components/NavBar"
+
 
 const App = () => {
   return (
     <div>
-      <NavBar />
+      <Navbar />
+      <Hero/>
 
-      <h1 className='text-blue-500'>Hello, World!</h1>
+      
     </div>
   )
 }
