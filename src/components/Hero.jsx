@@ -1,5 +1,10 @@
 // Hero.jsx
 import React from "react";
+import p1 from "../assets/p1.png";
+import p2 from "../assets/p2.webp";
+import p3 from "../assets/p3.avif";
+
+
 
 const Hero = () => {
   return (
@@ -8,17 +13,17 @@ const Hero = () => {
       <div className="flex justify-center items-center gap-3 mb-8">
         <div className="flex -space-x-3">
           <img
-            src="/founder1.jpg"
+            src={p1}
             alt="Founder 1"
             className="w-8 h-8 rounded-full border border-white shadow-sm object-cover"
           />
           <img
-            src="/founder2.jpg"
+            src={p2}
             alt="Founder 2"
             className="w-8 h-8 rounded-full border border-white shadow-sm object-cover"
           />
           <img
-            src="/founder3.jpg"
+            src={p3}
             alt="Founder 3"
             className="w-8 h-8 rounded-full border border-white shadow-sm object-cover"
           />
