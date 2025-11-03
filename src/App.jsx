@@ -1,8 +1,11 @@
 
+import AwardsWinning from './components/AwardsWinning.jsx';
 import FAQSection from './components/FAQSection.jsx';
 import Hero from './components/Hero.jsx'
 import MarqueeSection from './components/MarqueeSection.jsx';
 import Navbar from './components/NavBar.jsx';
+import PricingSection from './components/PricingSection.jsx';
+
 import About from './components/about.jsx';
 import StackScroll from "./components/stackscroll";
 
@@ -14,10 +17,12 @@ const App = () => {
       <Hero/>
       <MarqueeSection />
       <About/>
+      <AwardsWinning/>
+      <PricingSection />
       <FAQSection />
       <StackScroll />
 
-      <h1 className='text-blue-500'>Hello, World!</h1>
+     
     </div>
   );
 };
