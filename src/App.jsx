@@ -1,4 +1,5 @@
 
+import FAQSection from './components/FAQSection.jsx';
 import Hero from './components/Hero.jsx'
 import Navbar from './components/NavBar.jsx';
 import About from './components/about.jsx';
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <Hero/>
       <About/>
+      <FAQSection />
       <StackScroll />
 
       <h1 className='text-blue-500'>Hello, World!</h1>
