@@ -11,6 +11,7 @@ import About from './components/about.jsx';
 import StackScroll from "./components/stackscroll";
 
 import LetsConnect from './components/LetsConnect.jsx';
+import Footer from './components/footer.jsx';
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
       <About/>
       <AwardsWinning/>
       <PricingSection />
+      <Footer />
       <FAQSection />
       <StackScroll />
 
