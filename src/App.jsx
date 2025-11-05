@@ -1,34 +1,29 @@
-
 import AwardsWinning from './components/AwardsWinning.jsx';
-
 import FAQSection from './components/FAQSection.jsx';
-import Hero from './components/Hero.jsx'
+import Hero from './components/Hero.jsx';
 import MarqueeSection from './components/MarqueeSection.jsx';
-import Navbar from './components/NavBar.jsx';
+import Navbar from './components/Navbar.jsx';  // ✅ changed NavBar → Navbar
 import PricingSection from './components/PricingSection.jsx';
-
-import About from './components/about.jsx';
-import StackScroll from "./components/stackscroll";
-
+import TestimonialsSection from './components/LetsConnectHeader.jsx';
+import About from './components/About.jsx';  // ✅ changed about → About
+import StackScroll from './components/StackScroll.jsx';  // ✅ added .jsx and fixed case
 import LetsConnect from './components/LetsConnect.jsx';
-import Footer from './components/footer.jsx';
-
+import Footer from './components/Footer.jsx'; // ✅ changed footer → Footer
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Hero/>
+      <Hero />
       <MarqueeSection />
-      <LetsConnect/>
-      <About/>
-      <AwardsWinning/>
+      <About />
+      <TestimonialsSection />
+      <LetsConnect />
+      <AwardsWinning />
       <PricingSection />
       <Footer />
       <FAQSection />
       <StackScroll />
-
-     
     </div>
   );
 };
