@@ -14,6 +14,18 @@ const App = () => {
   return (
     <div>
       <Navbar />
+      <Hero/>
+      <MarqueeSection /> 
+       <StackScroll />
+      <LetsConnect/>
+      <About/>
+      <AwardsWinning/>
+      <PricingSection />
+      <Footer />
+      <FAQSection />
+      
+
+     
       <Hero />
       <MarqueeSection />
       <About />
