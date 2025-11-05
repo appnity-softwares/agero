@@ -3,7 +3,7 @@ import React from 'react';
 
 const MarqueeSection = () => {
   return (
-    <div className="relative  w-full h-80 bg-gray-100 overflow-hidden flex items-center justify-center">
+    <div className="relative  w-full h-80 bg-[#e6e6e6] overflow-hidden flex items-center justify-center">
       {/* Orange Diagonal Marquee with DEPRECATED <marquee> tag */}
       <div 
         className="absolute w-[150%] h-16 bg-orange-500 transform -rotate-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden flex items-center"
