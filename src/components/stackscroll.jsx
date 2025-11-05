@@ -54,20 +54,11 @@ const StickyCardsSection = () => {
   return (
     <section ref={sectionRef} className="relative py-32 text-gray-900 bg-transparent  w-full">
       <div className="container-full mx-auto px-6">
-         <div className="relative">
-      {/* Main Let's Connect div */}
-      <div className="h-52 bg-gray-200 flex items-center justify-center overflow-hidden relative">
-        <div className="relative">
-          <h1 className="text-8xl md:text-9xl font-bold text-gray-300">
-            Recent Works
-          </h1>
-        </div>
+       <div className="flex justify-center items-center min-h-[22vh] relative">
+        <h1 className="text-[10vw] font-bold text-center leading-none text-transparent bg-clip-text bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] bg-clip-text text-transparent opacity-40">
+          Recent Works
+        </h1>
       </div>
-      
-      {/* Bottom blank div with blur effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/95 to-transparent backdrop-blur-md z-10"></div>
-    </div>
-
         <div className="flex flex-col relative -mt-20 z-10 px-6  gap-20 items-center">
           {/* Card 01 */}
           <div
@@ -114,7 +105,7 @@ const StickyCardsSection = () => {
               </div>
             </div>
           </div>
-            {/* Card 02 */}
+          {/* Card 02 */}
           <div
             ref={(el) => (cardRefs.current[1] = el)}
             className="sticky top-32 bg-white rounded-3xl overflow-hidden w-full  shadow-lg border border-gray-200"
