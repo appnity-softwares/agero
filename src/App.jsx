@@ -19,14 +19,15 @@ const App = () => {
     <div>
       <Navbar />
       <Hero/>
-      <MarqueeSection />
+      <MarqueeSection /> 
+       <StackScroll />
       <LetsConnect/>
       <About/>
       <AwardsWinning/>
       <PricingSection />
       <Footer />
       <FAQSection />
-      <StackScroll />
+      
 
      
     </div>

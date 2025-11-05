@@ -1,23 +1,23 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "lenis";
+import Lenis from "@studio-freight/lenis";
 
-import stack1 from "../assets/stack1.png";
-import stack2 from "../assets/stack2.png";
-import stack3 from "../assets/stack3.png";
+import img1 from "../assets/stack1.png";
+import img2 from "../assets/stack2.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const StackScroll = () => {
-  const containerRef = useRef(null);
-  const imageRefs = useRef([]);
+const StickyCardsSection = () => {
+  const sectionRef = useRef(null);
+  const cardRefs = useRef([]);
 
   useEffect(() => {
-    // Smooth scroll with Lenis
+    // Smooth scroll
     const lenis = new Lenis({
+      duration: 1.2,
       smooth: true,
-      lerp: 0.1,
+      direction: "vertical",
     });
 
     function raf(time) {
@@ -26,114 +26,120 @@ const StackScroll = () => {
     }
     requestAnimationFrame(raf);
 
-    // GSAP + ScrollTrigger setup
-    const images = imageRefs.current;
-    const total = images.length;
-
-    if (!images[0]) return;
-
-    // Set initial state for all images
-    images.forEach((img, i) => {
-      gsap.set(img, {
-        yPercent: i === 0 ? 0 : 120,
-        rotationX: i === 0 ? 0 : -45,
-        scale: i === 0 ? 1 : 0.9,
-        opacity: 1,
+    // GSAP animations
+    const ctx = gsap.context(() => {
+      cardRefs.current.forEach((card) => {
+        gsap.fromTo(
+          card,
+          { y: 100, opacity: 0, rotateX: 15 },
+          {
+            y: 0,
+            opacity: 1,
+            rotateX: 0,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 80%",
+              end: "bottom 60%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
       });
-    });
+    }, sectionRef);
 
-    // Scroll animation with tilt and spacing
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: `+=${window.innerHeight * total * 1.2}`,
-        pin: true,
-        scrub: 1.2,
-      },
-    });
-
-    for (let i = 0; i < total - 1; i++) {
-      // Move current card up and tilt away
-      tl.to(images[i], {
-        yPercent: -80,
-        rotationX: 45,
-        scale: 0.85,
-        ease: "power3.inOut",
-        duration: 1.2,
-      });
-
-      // Add a small distance/pause between transitions
-      tl.to({}, { duration: 0.3 });
-
-      // Bring next image up with a smooth entry
-      tl.to(
-        images[i + 1],
-        {
-          yPercent: 0,
-          rotationX: 0,
-          scale: 1,
-          ease: "power3.out",
-          duration: 1.2,
-        },
-        "<"
-      );
-    }
-
-    return () => {
-      tl.kill();
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-      lenis.destroy();
-    };
+    return () => ctx.revert();
   }, []);
 
-  const cards = [
-    { id: 1, image: stack1, alt: "Stack 1" },
-    { id: 2, image: stack2, alt: "Stack 2" },
-    { id: 3, image: stack3, alt: "Stack 3" },
-  ];
-
   return (
-    <div
-      ref={containerRef}
-      className="relative h-screen w-full overflow-hidden bg-white"
-    >
-      <div className="relative flex h-full w-full items-center justify-center">
-        {cards.map((card, i) => (
+    <section ref={sectionRef} className="relative py-32 text-gray-900 bg-transparent  w-full">
+      <div className="container-full mx-auto px-6">
+         <div className="relative">
+      {/* Main Let's Connect div */}
+      <div className="h-52 bg-gray-200 flex items-center justify-center overflow-hidden relative">
+        <div className="relative">
+          <h1 className="text-8xl md:text-9xl font-bold text-gray-300">
+            Recent Works
+          </h1>
+        </div>
+      </div>
+      
+      {/* Bottom blank div with blur effect */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/95 to-transparent backdrop-blur-md z-10"></div>
+    </div>
+
+        <div className="flex flex-col relative -mt-20 z-10 px-6  gap-20 items-center">
+          {/* Card 01 */}
           <div
-            key={card.id}
-            ref={(el) => (imageRefs.current[i] = el)}
-            className="absolute inset-0 flex items-center justify-center"
-            style={{
-              zIndex: cards.length - i,
-              perspective: "1500px",
-            }}
+            ref={(el) => (cardRefs.current[0] = el)}
+            className="sticky top-32 bg-white rounded-3xl overflow-hidden w-full  shadow-lg border border-gray-200"
           >
-            {/* 🔹 Blurred full background */}
-           <div
-  className="absolute inset-0 w-full h-full bg-cover bg-center blur-2xl opacity-70 transition-all duration-500"
-  style={{
-    backgroundImage: `url(${card.image})`,
-    transform: "scale(1)", // remove scaling
-    borderRadius: "0px",   // ensure sharp edges
-    clipPath: "inset(0)",  // force clean edges (no blur bleed)
-  }}
-></div>
-
-
-            {/* 🔹 Focused Foreground Card */}
-            <div className="relative w-[298px] h-[398px] rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.4)] border border-white/10 bg-black/20 backdrop-blur-sm">
+            <div className="relative h-[60vh]">
               <img
-                src={card.image}
-                alt={card.alt}
-                className="h-full w-full object-cover"
+                src={img1}
+                alt="Project 1"
+                className="absolute inset-0 w-full h-full object-cover"
               />
+              <div className="absolute bottom-10 left-10 bg-white/80 backdrop-blur-md p-4 rounded-xl shadow-md">
+                <p className="text-5xl font-extrabold text-[#f8a420]">01</p>
+                <h3 className="text-2xl md:text-3xl font-semibold text-[#16498a]">
+                  Creative Campaign
+                </h3>
+                <p className="text-sm mt-2 text-gray-700">
+                  Showcasing modern motion design with bold visual identity.
+                </p>
+              </div>
             </div>
           </div>
-        ))}
+
+          {/* Card 02 */}
+          <div
+            ref={(el) => (cardRefs.current[1] = el)}
+            className="sticky top-32 bg-white rounded-3xl overflow-hidden w-full  shadow-lg border border-gray-200"
+          >
+            <div className="relative h-[60vh]">
+              <img
+                src={img2}
+                alt="Project 2"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute bottom-10 left-10 bg-white/80 backdrop-blur-md p-4 rounded-xl shadow-md">
+                <p className="text-5xl font-extrabold text-[#f8a420]">02</p>
+                <h3 className="text-2xl md:text-3xl font-semibold text-[#16498a]">
+                  Visual Storytelling
+                </h3>
+                <p className="text-sm mt-2 text-gray-700">
+                  Motion and narrative crafted to inspire emotion and engagement.
+                </p>
+              </div>
+            </div>
+          </div>
+            {/* Card 02 */}
+          <div
+            ref={(el) => (cardRefs.current[1] = el)}
+            className="sticky top-32 bg-white rounded-3xl overflow-hidden w-full  shadow-lg border border-gray-200"
+          >
+            <div className="relative h-[60vh]">
+              <img
+                src={img2}
+                alt="Project 2"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute bottom-10 left-10 bg-white/80 backdrop-blur-md p-4 rounded-xl shadow-md">
+                <p className="text-5xl font-extrabold text-[#f8a420]">02</p>
+                <h3 className="text-2xl md:text-3xl font-semibold text-[#16498a]">
+                  Visual Storytelling
+                </h3>
+                <p className="text-sm mt-2 text-gray-700">
+                  Motion and narrative crafted to inspire emotion and engagement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default StackScroll;
+export default StickyCardsSection;
