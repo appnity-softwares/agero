@@ -11,3 +11,6 @@
 body {
     font-family: sans-serif; /* Or your preferred font */
 }
+.font-cursive {
+  font-family: 'Pacifico', cursive;
+}
