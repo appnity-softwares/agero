@@ -89,7 +89,7 @@ const PricingSection= () => {
   }, []);
 
   return (
-    <div className="bg-[#dbdbdb] min-h-screen flex flex-col items-center pt-20 pb-40 font-[Inter]">
+    <div className="bg-[#dbdbdb] min-h-screen flex flex-col items-center pt-20  pb-40 font-[Inter]">
       {/* Header */}
       <header className="mb-20 text-center">
         <p className="text-neutral-600 mb-2 font-medium">(Pricing Plan)</p>
@@ -99,7 +99,7 @@ const PricingSection= () => {
       </header>
 
       {/* Cards Container */}
-      <main ref={cardContainerRef} className="w-[90vw] max-w-4xl mx-auto">
+      <main ref={cardContainerRef} className="w-[90vw]  max-w-4xl mx-auto">
         {plans.map((plan, index) => (
           <div
             key={plan.id}
@@ -121,7 +121,7 @@ const PricingSection= () => {
             <div
               className={`bg-gradient-to-br ${plan.gradient} ${plan.textColor}
                 grid grid-cols-1 lg:grid-cols-2 items-stretch p-8 md:p-10 rounded-3xl
-                overflow-hidden h-full
+                overflow-hidden h-full mt-32
               `}
             >
               {/* Left Section */}
@@ -183,7 +183,7 @@ const PricingSection= () => {
                 </div>
 
                 <button
-                  className={`mt-10 flex items-center justify-center gap-2 rounded-full px-7 py-3 font-medium text-base
+                  className={`mt-10  flex items-center justify-center gap-2 rounded-full px-7 py-3 font-medium text-base
                     ${plan.buttonColor} ${plan.buttonText} hover:opacity-90 transition
                   `}
                 >
