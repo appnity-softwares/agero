@@ -23,15 +23,15 @@ export default function LetsConnect() {
       </div>
       
       {/* Contact Form Section with background image */}
-      <div className="relative -mt-20 z-10 px-6  rounded-xl">
+      <div className="relative -mt-20 z-10 px-6  rounded-3xl">
         <div 
-          className="max-w-7xl mx-auto  py-16 px-16 bg-cover rounded-xl bg-center relative overflow-hidden"
+          className="max-w-7xl mx-auto py-16 px-16 bg-cover rounded-3xl bg-center relative overflow-hidden"
           style={{
             backgroundImage: 'url("https://framerusercontent.com/images/1sREGvYWbdhqXmijCOMUIsD7A.png?scale-down-to=2048")'
           }}
         >
           {/* Dark overlay for better text visibility */}
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-black/60    backdrop-blur-sm"></div>
           
           {/* Content */}
           <div className="relative z-10">
@@ -118,7 +118,7 @@ export default function LetsConnect() {
           100% { transform: translateX(-50%); }
         }
         .animate-marquee {
-          animation: marquee 20s linear infinite;
+          animation: marquee 30s linear infinite;
         }
       `}</style>
     </div>
