@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Button from "./button";
 
 const About = () => {
   useEffect(() => {
@@ -38,12 +39,12 @@ const About = () => {
         className="flex flex-wrap justify-center gap-3 mt-10"
 
       >
-        <button
-          className="px-5 py-2 bg-gray-500 text-white rounded-full flex items-center gap-2 hover:bg-black transition"
- 
-        >
-         <i className="fas fa-star"></i> Branding
-        </button>
+        <Button name="branding01" icon="fas fa-globe" />
+        <Button name="branding02" />
+        <Button/>
+        <Button/>
+        <Button/>
+        <Button/>
 
         <button
           className="px-5 py-2 bg-gray-600 text-white rounded-full flex items-center gap-2 hover:bg-black transition"
