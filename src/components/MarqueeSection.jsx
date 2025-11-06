@@ -109,7 +109,10 @@ const MarqueeSection = () => {
         {/* </marquee> */}
         
       </div>
+
+ 
     </div>
+    
   );
 };
 

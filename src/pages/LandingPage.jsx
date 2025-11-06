@@ -9,6 +9,8 @@ import PricingSection from '../components/PricingSection'
 import FAQSection from '../components/FAQSection'
 import Footer from '../components/Footer'
 import LetsConnect from '../components/LetsConnect'
+import ServicesCarousel from '../components/ServicesCarousel'
+import FounderCard from '../components/FounderCard'
 
 
 const LandingPage = () => {
@@ -16,6 +18,8 @@ const LandingPage = () => {
     <div>
         
         <Hero/>
+        <FounderCard/>
+        <ServicesCarousel/>
         <MarqueeSection/>
         <TestimonialsSection/>
         <AwardsWinning/>
