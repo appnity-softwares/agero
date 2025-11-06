@@ -1,31 +1,31 @@
 import React from "react";
-import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
-import MarqueeSection from "./components/MarqueeSection.jsx";
-import StackScroll from "./components/StackScroll.jsx";
-import LetsConnect from "./components/LetsConnect.jsx";
-import About from "./components/About.jsx";
-import TestimonialsSection from "./components/TestimonialsSection.jsx";
-import AwardsWinning from "./components/AwardsWinning.jsx";
-import PricingSection from "./components/PricingSection.jsx";
-import FAQSection from "./components/FAQSection.jsx";
+import NavBar from "./components/NavBar.jsx";
+
 import Footer from "./components/Footer.jsx";
+import LandingPage from "./pages/LandingPage.jsx";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Works from "./pages/Works.jsx";
+import Services from "./pages/Services.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+import BlogPage from "./pages/BlogPage.jsx";
 
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <MarqueeSection />
-      <About />
-      <TestimonialsSection />
-      <StackScroll />
-      <LetsConnect />
-
-      <AwardsWinning />
-      <PricingSection />
-      <FAQSection />
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/works" element={<Works />} />
+        <Route path="/services" element={<Services/>} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/blog" element={<BlogPage/>} />
+      </Routes>
       <Footer />
+
+      </Router>
+      
+      
     </div>
   );
 };

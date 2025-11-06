@@ -1,6 +1,8 @@
 // Navbar.jsx
 import React from "react";
 import logo from "../assets/agerologo.svg"
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   return (
@@ -15,19 +17,21 @@ const Navbar = () => {
       <nav className="max-w-7xl mx-auto flex justify-between items-center px-10 py-8 gap-10">
         {/* Logo Image */}
         <div className="flex items-center gap-2">
+          <Link to="/">
           <img
             src={logo}
             alt="Agero Logo"
             className="h-8 w-auto object-contain"
           />
+          </Link>
         </div>
 
         {/* Nav Links */}
         <ul className="hidden md:flex gap-8 text-gray-600 font-medium text-xs tracking-wide">
-          <li className="hover:text-black cursor-pointer transition-colors duration-200">Works</li>
-          <li className="hover:text-black cursor-pointer transition-colors duration-200">Services</li>
-          <li className="hover:text-black cursor-pointer transition-colors duration-200">About</li>
-          <li className="hover:text-black cursor-pointer transition-colors duration-200">Blog</li>
+          <li className="hover:text-black cursor-pointer transition-colors duration-200"><Link to="/works">Works</Link> </li>
+          <li className="hover:text-black cursor-pointer transition-colors duration-200"><Link to="/services">Services</Link></li>
+          <li className="hover:text-black cursor-pointer transition-colors duration-200"><Link to="/about">About</Link></li>
+          <li className="hover:text-black cursor-pointer transition-colors duration-200"><Link to="/blog">Blog</Link></li>
         </ul>
 
         {/* Contact Button */}

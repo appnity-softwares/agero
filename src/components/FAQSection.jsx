@@ -66,7 +66,7 @@ const AccordionItem = ({ faq, isOpen, toggleAccordion }) => {
   );
 };
 
-const FAQComponent = () => {
+const FAQSection = () => {
   // activeId state se pata chalta hai ki kaunsa FAQ item open hai.
   // Humne '2' ko default open rakha hai, jaise ki aapke image mein "Speed of design delivery?" open tha.
   const [activeId, setActiveId] = useState(2); 
@@ -127,4 +127,4 @@ const FAQComponent = () => {
   );
 };
 
-export default FAQComponent;
+export default FAQSection;

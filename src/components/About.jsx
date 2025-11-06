@@ -40,25 +40,9 @@ const About = () => {
 
       >
         <Button name="branding01" icon="fas fa-globe" />
-        <Button name="branding02" />
-        <Button/>
-        <Button/>
-        <Button/>
-        <Button/>
-
-        <button
-          className="px-5 py-2 bg-gray-600 text-white rounded-full flex items-center gap-2 hover:bg-black transition"
- 
-        >
-         <i className="fas fa-globe"></i> Logo
-        </button>
-
-        <button
-          className="px-5 py-2 bg-gray-500 text-white rounded-full flex items-center gap-2 hover:bg-black transition"
- 
-        >
-         <i className="fas fa-desktop"></i> Website
-        </button>
+        <Button icon="fas fa-globe" name="Logo" />
+        <Button icon="fas fa-desktop "  name="Website" />
+        
       </div>
 
       {/* Second row: 3 buttons */}
@@ -66,26 +50,12 @@ const About = () => {
         className="flex flex-wrap justify-center gap-3 mt-6"
  
       >
-        <button
-          className="px-5 py-2 bg-gray-500 text-white rounded-full flex items-center gap-2 hover:bg-black transition"
- 
-        >
-          <i className="fas fa-paint-brush"></i> Illustration
-        </button>
 
-        <button
-          className="px-5 py-2 bg-gray-500 text-white rounded-full flex items-center gap-2 hover:bg-black transition"
+        <Button name="Illustration" icon="fas fa-paint-brush" />
+        <Button name="Interface" icon="fas fa-bullseye" />
+        <Button name="Strategy" icon="fas fa-lightbulb" />
+
     
-        >
-          <i className="fas fa-bullseye"></i> Interface
-        </button>
-
-        <button
-          className="px-5 py-2 bg-gray-500 text-white rounded-full flex items-center gap-2 hover:bg-black transition"
-      
-        >
-          <i className="fas fa-lightbulb"></i> Strategy
-        </button>
       </div>
       </div>
     </section>
