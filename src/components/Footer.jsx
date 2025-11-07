@@ -4,6 +4,7 @@ export default function AgeroFooter() {
   return (
     <div className="min-h-screen p-8 bg-[#dbdbdb]">
       <footer className="relative h-screen overflow-hidden rounded-3xl">
+ 
 
 
         {/* ✅ Background Layer 2 (texture overlay) */}
@@ -26,6 +27,7 @@ export default function AgeroFooter() {
         {/* ✅ Main Content */}
         <div className="relative z-10 h-full flex flex-col justify-between">
           <div className="max-w-7xl mx-auto w-full px-8 py-16">
+ 
             <div className="grid grid-cols-3 gap-16">
 
               {/* Navigation Section */}
@@ -60,6 +62,9 @@ export default function AgeroFooter() {
 
             </div>
           </div>
+ 
+          
+ 
 
           {/* ✅ Footer Bottom Section */}
           <div className="relative flex flex-col items-center   pb-80">
@@ -90,6 +95,7 @@ export default function AgeroFooter() {
 
           </div>
 
+  
         </div>
       </footer>
     </div>
