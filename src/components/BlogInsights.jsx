@@ -71,7 +71,7 @@ export default function BlogInsights() {
               className=""
             >
               {/* 🖼️ Image Section */}
-              <div className="relative w-full h-[280px] md:h-[320px] lg:h-[360px] rounded-3xl overflow-hidden">
+              <div className="relative w-full h-[340px] md:h-[400px] lg:h-[540px] rounded-3xl overflow-hidden">
                 <img
                   src={blog.image}
                   alt={blog.title}
