@@ -67,115 +67,125 @@ const TestimonialsCarousel = () => {
   }, [currentSlide, testimonials.length]);
 
   return (
-    <div className="min-h-screen bg-[#f5f5f5] flex items-center justify-center p-8">
-    <div className="max-w-7xl w-full">
-        {/* Large translucent background heading */}
-        <div className="relative mb-8">
-          <h1 className="text-[7rem] md:text-[8.5rem] lg:text-[9rem] font-bold text-gray-200 text-center select-none tracking-tight leading-[0.85] -mt-4">
-            testimonials
-          </h1>
-        </div>
+<div className="min-h-screen bg-[#e6e6e6] flex flex-col items-center justify-center p-8 relative overflow-hidden">
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <div className="lg:col-span-1" />
+  {/* ✅ Small subtitle above heading */}
+  <p className="text-center text-gray-500 text-sm md:text-base tracking-wide mb-2 z-10 relative">
+    (Why clients love Agero)
+  </p>
 
-          {/* ✅ Left Stats Box with video background */}
-          <div
-            className="relative lg:col-span-4 rounded-3xl overflow-hidden flex flex-col justify-center p-12 text-white"
-            style={{ height: "450px" }}
-          >
-            {/* Background video */}
-            <video
-              src={statsVideo}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/70" />
-            <div className="relative z-10">
-              {stats.map((stat, index) => (
-                <div key={index} className="mb-8 last:mb-0">
-                  <div className="text-7xl font-bold mb-2">{stat.value}</div>
-                  <div className="text-gray-300 text-lg">{stat.label}</div>
-                </div>
-              ))}
+  {/* ✅ Massive translucent background heading */}
+  <h1
+    className="absolute top-[6%] left-1/2 -translate-x-1/2 
+    text-[10rem] md:text-[13rem] lg:text-[12rem] font-bold 
+    tracking-tight leading-[0.85]
+    bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] 
+    bg-clip-text text-transparent
+    opacity-40 select-none z-0 pointer-events-none"
+  >
+    Testimonials
+  </h1>
+
+  {/* ✅ Foreground content */}
+  <div className="relative z-10 max-w-7xl w-full mt-32">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-20">
+      <div className="lg:col-span-1" />
+
+      {/* ✅ Left Stats Box with video background */}
+      <div
+        className="relative lg:col-span-4 rounded-3xl overflow-hidden flex flex-col justify-center p-12 text-white"
+        style={{ height: "480px" }}
+      >
+        {/* Background video */}
+        <video
+          src={statsVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="relative z-10">
+          {stats.map((stat, index) => (
+            <div key={index} className="mb-8 last:mb-0">
+              <div className="text-7xl font-bold mb-2">{stat.value}</div>
+              <div className="text-gray-300 text-lg">{stat.label}</div>
             </div>
-          </div>
+          ))}
+        </div>
+      </div>
 
-          {/* ✅ Right carousel */}
-          <div
-            className="lg:col-span-7 relative rounded-3xl overflow-hidden"
-            style={{ height: "450px" }}
-          >
+      {/* ✅ Right carousel */}
+      <div
+        className="lg:col-span-7 relative rounded-3xl overflow-hidden"
+        style={{ height: "480px" }}
+      >
+        <div
+          ref={carouselRef}
+          className={`flex h-full ${
+            isTransitioning
+              ? "transition-transform duration-700 ease-in-out"
+              : ""
+          }`}
+          style={{
+            transform: `translateX(-${currentSlide * 100}%)`,
+          }}
+        >
+          {extendedSlides.map((testimonial, index) => (
             <div
-              ref={carouselRef}
-              className={`flex h-full ${
-                isTransitioning
-                  ? "transition-transform duration-700 ease-in-out"
-                  : ""
-              }`}
+              key={index}
+              className="min-w-full relative bg-cover bg-center"
               style={{
-                transform: `translateX(-${currentSlide * 100}%)`,
+                backgroundImage: `url(${testimonial.image})`,
               }}
             >
-              {extendedSlides.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="min-w-full relative bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${testimonial.image})`,
-                  }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                  <div className="relative h-full flex flex-col justify-between p-10">
-                    <div className="text-white/80 text-sm font-medium">
-                      {String((index % testimonials.length) + 1).padStart(
-                        2,
-                        "0"
-                      )}{" "}
-                      / {String(testimonials.length).padStart(2, "0")}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="relative h-full flex flex-col justify-between p-10">
+                <div className="text-white/80 text-sm font-medium">
+                  {String((index % testimonials.length) + 1).padStart(2, "0")} /{" "}
+                  {String(testimonials.length).padStart(2, "0")}
+                </div>
+                <div>
+                  <p className="text-white text-2xl md:text-3xl font-semibold mb-6 leading-relaxed">
+                    “{testimonial.quote}”
+                  </p>
+                  <div>
+                    <div className="text-white font-semibold text-lg">
+                      {testimonial.author}
                     </div>
-                    <div>
-                      <p className="text-white text-2xl md:text-3xl font-semibold mb-6 leading-relaxed">
-                        “{testimonial.quote}”
-                      </p>
-                      <div>
-                        <div className="text-white font-semibold text-lg">
-                          {testimonial.author}
-                        </div>
-                        <div className="text-white/80 text-sm">
-                          {testimonial.position}
-                        </div>
-                      </div>
+                    <div className="text-white/80 text-sm">
+                      {testimonial.position}
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
+          ))}
+        </div>
 
-            {/* Arrows */}
-            <div className="absolute bottom-10 right-10 flex gap-3 z-20">
-              <button
-                onClick={prevSlide}
-                className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-3 transition-all"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-3 transition-all"
-              >
-                <ChevronRight size={24} />
-              </button>
-            </div>
-          </div>
-
-          <div className="lg:col-span-1" />
+        {/* Arrows */}
+        <div className="absolute bottom-10 right-10 flex gap-3 z-20">
+          <button
+            onClick={prevSlide}
+            className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-3 transition-all"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-3 transition-all"
+          >
+            <ChevronRight size={24} />
+          </button>
         </div>
       </div>
+
+      <div className="lg:col-span-1" />
     </div>
+  </div>
+</div>
+
   );
 };
 
