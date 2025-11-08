@@ -76,12 +76,13 @@ const TestimonialsCarousel = () => {
 
   {/* ✅ Massive translucent background heading */}
   <h1
-    className="absolute top-[6%] left-1/2 -translate-x-1/2 
+    className="absolute top-[12%] left-1/2 -translate-x-1/2 
     text-[10rem] md:text-[13rem] lg:text-[12rem] font-bold 
     tracking-tight leading-[0.85]
     bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] 
     bg-clip-text text-transparent
-    opacity-40 select-none z-0 pointer-events-none"
+    opacity-40 select-none z-0 pointer-events-none "
+    
   >
     Testimonials
   </h1>

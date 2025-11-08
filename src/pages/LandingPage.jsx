@@ -12,6 +12,7 @@ import LetsConnect from '../components/LetsConnect'
 import About from '../components/About'
 import ServicesCarousel from '../components/ServicesCarousel'
 import FounderCard from '../components/FounderCard'
+import Section2 from '../components/Section2'
 
 
 
@@ -20,6 +21,7 @@ const LandingPage = () => {
     <div>
         
         <Hero/>
+        <Section2/>
         <FounderCard/>
         <ServicesCarousel/>
         <MarqueeSection/>

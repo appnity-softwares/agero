@@ -54,11 +54,11 @@ const StickyCardsSection = () => {
   return (
     <section ref={sectionRef} className="relative py-32 text-gray-900 bg-transparent  w-full">
       <div className="container-full mx-auto px-6">
-       <div className="flex justify-center items-center min-h-[22vh] relative">
-        <h1 className="text-[10vw] font-bold text-center leading-none text-transparent bg-clip-text bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] bg-clip-text text-transparent opacity-40">
-          Recent Works
-        </h1>
-      </div>
+        <div className="flex justify-center items-center min-h-[22vh] relative">
+          <h1 className="text-[10vw] font-bold text-center leading-none text-transparent bg-clip-text bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] bg-clip-text text-transparent opacity-40">
+            Recent Works
+          </h1>
+        </div>
         <div className="flex flex-col relative -mt-20 z-10 px-6  gap-20 items-center">
           {/* Card 01 */}
           <div
