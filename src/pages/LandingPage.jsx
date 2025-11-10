@@ -19,22 +19,21 @@ import Section2 from '../components/Section2'
 const LandingPage = () => {
   return (
     <div>
-        
-        <Hero/>
-        <Section2/>
-        <FounderCard/>
-        <ServicesCarousel/>
-        <MarqueeSection/>
-        
-        <About/>
-        <TestimonialsSection/>
-        <StackScroll/>
-        <AwardsWinning/>
-        <PricingSection/>
-        <FAQSection/>
-        <LetsConnect/>
-        
-      
+
+      <Hero />
+      <Section2 />
+      <MarqueeSection />
+      <About />
+      <TestimonialsSection />
+      <StackScroll />
+      <ServicesCarousel />
+      <FounderCard />
+      <AwardsWinning />
+      <PricingSection />
+      <FAQSection />
+      <LetsConnect />
+
+
     </div>
   )
 }

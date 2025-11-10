@@ -23,7 +23,7 @@ const About = () => {
       {/* Main heading */}
       <h1
         className="text-4xl md:text-5xl font-bold leading-tight text-black max-w-4xl font-sans"
- 
+
       >
         We help fast moving digital startups <br />
         launch sharper brands and websites — <br />
@@ -32,31 +32,31 @@ const About = () => {
           <span className="text-gray-500 font-normal">and no drama.</span>
         </span>
       </h1>
-<div className="container"        data-aos="fade-right"
+      <div className="container" data-aos="fade-right"
         data-aos-delay="300" >
-      {/* First row: 3 buttons */}
-      <div
-        className="flex flex-wrap justify-center gap-3 mt-10"
+        {/* First row: 3 buttons */}
+        <div
+          className="flex flex-wrap justify-center gap-3 mt-10"
 
-      >
-        <Button name="branding01" icon="fas fa-globe" />
-        <Button icon="fas fa-globe" name="Logo" />
-        <Button icon="fas fa-desktop "  name="Website" />
-        
-      </div>
+        >
+          <Button name="branding01" icon="fas fa-globe" />
+          <Button icon="fas fa-globe" name="Logo" />
+          <Button icon="fas fa-desktop " name="Website" />
 
-      {/* Second row: 3 buttons */}
-      <div
-        className="flex flex-wrap justify-center gap-3 mt-6"
- 
-      >
+        </div>
 
-        <Button name="Illustration" icon="fas fa-paint-brush" />
-        <Button name="Interface" icon="fas fa-bullseye" />
-        <Button name="Strategy" icon="fas fa-lightbulb" />
+        {/* Second row: 3 buttons */}
+        <div
+          className="flex flex-wrap justify-center gap-3 mt-6"
 
-    
-      </div>
+        >
+
+          <Button name="Illustration" icon="fas fa-paint-brush" />
+          <Button name="Interface" icon="fas fa-bullseye" />
+          <Button name="Strategy" icon="fas fa-lightbulb" />
+
+
+        </div>
       </div>
     </section>
   );
