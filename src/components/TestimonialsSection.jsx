@@ -76,7 +76,7 @@ const TestimonialsCarousel = () => {
 
   {/* ✅ Massive translucent background heading */}
   <h1
-    className="absolute top-[12%] left-1/2 -translate-x-1/2 
+    className="absolute top-[9%] left-1/2 -translate-x-1/2 
     text-[10rem] md:text-[13rem] lg:text-[12rem] font-bold 
     tracking-tight leading-[0.85]
     bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] 
@@ -89,12 +89,12 @@ const TestimonialsCarousel = () => {
 
   {/* ✅ Foreground content */}
   <div className="relative z-10 max-w-7xl w-full mt-32">
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-20">
-      <div className="lg:col-span-1" />
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-20">
+      
 
       {/* ✅ Left Stats Box with video background */}
       <div
-        className="relative lg:col-span-4 rounded-3xl overflow-hidden flex flex-col justify-center p-12 text-white"
+        className="relative lg:col-span-4 rounded-3xl overflow-hidden flex flex-col justify-center p-9 text-white"
         style={{ height: "480px" }}
       >
         {/* Background video */}
@@ -106,11 +106,11 @@ const TestimonialsCarousel = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/70" />
-        <div className="relative z-10">
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 flex flex-col h-full justify-center text-base/8">
           {stats.map((stat, index) => (
             <div key={index} className="mb-8 last:mb-0">
-              <div className="text-7xl font-bold mb-2">{stat.value}</div>
+              <div className="text-7xl   font-bold mb-2">{stat.value}</div>
               <div className="text-gray-300 text-lg">{stat.label}</div>
             </div>
           ))}
@@ -119,7 +119,7 @@ const TestimonialsCarousel = () => {
 
       {/* ✅ Right carousel */}
       <div
-        className="lg:col-span-7 relative rounded-3xl overflow-hidden"
+        className="lg:col-span-8 relative rounded-3xl overflow-hidden"
         style={{ height: "480px" }}
       >
         <div
@@ -181,8 +181,7 @@ const TestimonialsCarousel = () => {
           </button>
         </div>
       </div>
-
-      <div className="lg:col-span-1" />
+ 
     </div>
   </div>
 </div>

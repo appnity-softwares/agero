@@ -80,7 +80,7 @@ const FAQSection = () => {
   const rightColumnFAQs = faqs.slice(3, 6); // Agle 3 items
 
   return (
-    <div className="min-h-screen bg-gray-100 py-16 md:py-24">
+    <div className="min-h-screen  bg-[#dbdbdb]  py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
