@@ -9,10 +9,10 @@ const About = () => {
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-[#e6e6e6] text-center px-5 mb-10">
+    <section className="flex flex-col items-center justify-center min-h-screen bg-[#e6e6e6] text-center px-5 mb-28">
       {/* Small orange hello text */}
       <p
-        className="text-orange-500 text-2xl font-medium mb-8 font-cursive"
+        className="text-orange-600 text-3xl font-normal mb-8 font-cursive"
         data-aos="fade-right"
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"

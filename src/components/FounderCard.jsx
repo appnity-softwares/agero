@@ -6,8 +6,8 @@ const FounderCard = () => {
     // Is outer div mein aap koi margin/padding de sakte hain agar aapko is card ko
     // apne page par position karna hai. Abhi yeh card khud apni styling sambhalega.
     <div >
-       <div className="flex justify-center items-center min-h-[22vh] relative top-48">
-          <h1 className="text-[10vw] font-bold text-center leading-none text-transparent bg-clip-text bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] bg-clip-text text-transparent opacity-40">
+       <div className="flex justify-center items-center min-h-[35vh] relative top-48">
+          <h1 className="text-[12vw] font-bold text-center leading-none   bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] bg-clip-text text-transparent opacity-40">
             Meet Finton
           </h1>
         </div>
@@ -18,7 +18,7 @@ const FounderCard = () => {
 
         <div className="flex justify-center py-16 px-4 relative "> {/* Added a wrapper div for centering just this card */}
 
-          <div className="relative w-full max-w-sm lg:max-w-md left bg-white rounded-3xl shadow-xl overflow-hidden p-4 font-inter"> {/* Added font-inter here */}
+          <div className="relative w-full max-w-sm lg:max-w-md left  rounded-6xl  overflow-hidden p-4 font-inter"> {/* Added font-inter here */}
             {/* New div to apply blur effect to the image */}
 
 
@@ -45,9 +45,10 @@ const FounderCard = () => {
 
             {/* Social Icons */}
             <div className="absolute bottom-8 left-8 flex space-x-3 text-gray-500 z-10">
-              <a href="#" className="bg-white p-2 rounded-full shadow-md flex items-center justify-center w-8 h-8 text-sm">X</a>
-              <a href="#" className="bg-white p-2 rounded-full shadow-md flex items-center justify-center w-8 h-8 text-sm">🌐</a>
-              <a href="#" className="bg-white p-2 rounded-full shadow-md flex items-center justify-center w-8 h-8 text-sm">📸</a>
+              <a href="#"style={{backgroundColor:'#302929'}} className=" text-white p-2 rounded-full shadow-md flex items-center justify-center w-8 h-8 text-sm"><i className="fa-brands fa-x-twitter text-white text-md"></i></a>
+              <a href="#"style={{backgroundColor:'#302929'}} className="text-white p-2 rounded-full shadow-md flex items-center justify-center w-8 h-8 text-sm"><i className="fab fa-dribbble text-white text-md"></i>
+</a>
+              <a href="#" style={{backgroundColor:'#302929'}}className="text-white p-2 rounded-full shadow-md flex items-center justify-center w-8 h-8 text-sm"><i className="fab fa-instagram text-white text-md"></i></a>
             </div>
           </div>
         </div>

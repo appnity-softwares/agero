@@ -16,22 +16,15 @@ export default function LetsConnect() {
     <div className="relative min-h-screen overflow-hidden  " style={{ backgroundColor: '#dbdbdb' }}>
 
       {/* Main Let's Connect header */}
-      <div className="relative h-40   flex items-center justify-center overflow-hidden">
-        <h1
-          className=" relative top-[12%] left-1/2 -translate-x-1/2
-    text-[10rem] md:text-[10rem] lg:text-[12rem] font-bold 
-    tracking-tight leading-[0.85]
-    bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] 
-    bg-clip-text text-transparent
-    opacity-35 select-none z-0 pointer-events-none bg-white/30 backdrop-blur-sm"
+      <div className="relative h-80      flex items-center justify-center overflow-hidden">
+<h1 className="text-[10rem] md:text-[13rem] lg:text-[12rem] font-bold text-center leading-none tracking-tight bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] bg-clip-text text-transparent opacity-40">
+  Let's Connect
+</h1>
 
-        >
-          Let's Connect
-        </h1>
       </div>
 
       {/* Contact Form Section with background image */}
-      <div className="relative mt-1 z-10 px-6  w-full   h-auto rounded-3xl    ">
+      <div className="relative mt-[-8rem] z-10 px-6  w-full   h-auto rounded-3xl    ">
 <div
   className="bg-cover bg-center object-cover rounded-3xl relative overflow-hidden flex items-baseline justify-stretch px-28 md:px-16 py-32"
  style={{
@@ -102,7 +95,7 @@ export default function LetsConnect() {
 
             {/* Email marquee at bottom */}
             
-            {<div className="mt-20 flex justify-center"> 
+            {<div className="mt-64 flex justify-center"> 
              
               <div className="will-auto overflow-hidden relative">
                 <div className="flex gap-8 items-center whitespace-nowrap animate-marquee text-bold">
