@@ -35,7 +35,7 @@ export default function LetsConnect() {
         
 
           {/* Content */}
-          <div className="relative z-10 py-12 px-2  mx-auto w-full mt-16">
+          <div className="relative z-10   px-2  mx-auto w-full ">
             <div className="grid md:grid-cols-2 gap-12">
               {/* Left side - Heading */}
               <div className="text-white mx-11">
