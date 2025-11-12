@@ -96,7 +96,7 @@ const AwardsWinning = () => {
 
                 {/* Hover Image Container */}
                 {hoveredIndex === index && (
-                  <div className="absolute right-[-120px] bottom-[12px] bg-orange-600 rounded-full p-2  flex gap-4 items-center justify-center shadow-lg transition-all duration-300">
+                  <div className="absolute right-[-90px] bottom-[12px] bg-orange-600 rounded-full p-2  flex gap-4 items-center justify-center shadow-lg transition-all duration-300">
                     {award.images.map((imgSrc, i) => (
                       <img
                         key={i}
