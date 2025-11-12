@@ -1,91 +1,124 @@
-import { div } from 'framer-motion/client';
-import React from 'react';
+import React from "react";
 
-const FounderCard = () => {
+const FounderSection = () => {
   return (
-    // Is outer div mein aap koi margin/padding de sakte hain agar aapko is card ko
-    // apne page par position karna hai. Abhi yeh card khud apni styling sambhalega.
-    <div >
-       <div className="flex justify-center items-center min-h-[35vh] relative top-48">
-          <h1 className="text-[12vw] font-bold text-center leading-none   bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] bg-clip-text text-transparent opacity-40">
-            Meet Finton
-          </h1>
-        </div>
+    <div className="relative bg-[#dbdbdb] py-20 font-inter overflow-hidden">
+      {/* 🔹 Subtitle */}
+      <p className="text-center text-gray-500 text-sm md:text-base tracking-wide mb-20 relative z-10">
+        (intro)
+      </p>
 
-      <div className="bg-gray-50 shad py-12 flex justify-center "> {/* Added background color and padding for the entire section */}
+      {/* 🔹 Background Big Text */}
+      <h1
+        className="absolute top-[10%] left-1/2 -translate-x-1/2 
+        text-[18vw] md:text-[13vw] font-bold leading-none 
+        bg-gradient-to-b from-[rgba(22,22,22,0.83)] via-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0)]
+        bg-clip-text text-transparent opacity-40 z-10 whitespace-nowrap select-none"
+      >
+        Meet Finton
+      </h1>
 
-      
+      {/* ✅ Custom CSS for rotating badge */}
+      <style>
+        {`
+          @keyframes rotateInfinite {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}
+      </style>
 
-        <div className="flex justify-center py-16 px-4 relative "> {/* Added a wrapper div for centering just this card */}
+      {/* 🔸 Main Section */}
+      <div className="relative z-10 container mx-auto flex flex-col lg:flex-row justify-center items-center lg:items-start gap-44 px-6 md:px-10">
+        {/* Left Column - Image Card */}
+        <div className="relative w-full max-w-[450px] z-20 mt-16 lg:mt-7">
+          <div className="relative rounded-2xl overflow-hidden image-with-half-blur-scoped">
+            <img
+              src="https://framerusercontent.com/images/cdiudTEW8MSbl2008vSYXSq9ndI.png?scale-down-to=1024"
+              alt="Franklin Clinton"
+              className="w-[60vh] h-[74vh] md:w-[40vw] object-cover rounded-3xl"
+            />
+          </div>
+{/* 🟢 Rotating Badge */}
+<div
+  className="absolute bottom-[40px] right-[-60px] w-36 h-36 rounded-full    z-30 flex items-center justify-center overflow-hidden"
+  style={{
+    animation: "rotateInfinite 6s linear infinite",
+  }}
+>
+  {/* 🖼️ Rotating Badge Image */}
+  <img
+    src="https://framerusercontent.com/images/JpJ9ryMkQp811zxkS5X8I8Igdo.png"
+    alt="Award Badge"
+    className="w-full h-full object-cover rounded-full"
+  />
 
-          <div className="relative w-full max-w-sm lg:max-w-md left  rounded-6xl  overflow-hidden p-4 font-inter"> {/* Added font-inter here */}
-            {/* New div to apply blur effect to the image */}
+  {/* 🔁 Rotation Animation */}
+  <style>
+    {`
+      @keyframes rotateInfinite {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    `}
+  </style>
+</div>
 
 
 
-            <div className="relative rounded-2xl overflow-hidden image-with-half-blur-scoped"> {/* Renamed custom class */}
-              <img
-                src="https://framerusercontent.com/images/cdiudTEW8MSbl2008vSYXSq9ndI.png?scale-down-to=1024"
-                alt="Franklin Clinton"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-
-            {/* Badge */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-2.5 shadow-lg border border-gray-200 z-10 flex items-center justify-center">
-              <div className="w-24 h-24 rounded-full bg-transparent flex flex-col items-center justify-center text-gray-600 text-center text-[0.6rem] leading-tight font-semibold uppercase tracking-wider space-y-1">
-                <span>Designer</span>
-                <span>- Since 2020 -</span>
-                <div className="w-6 h-6 rounded-full border border-gray-400 flex items-center justify-center text-xs">
-                  <span className="text-gray-500">◎</span>
-                </div>
-                <span>Winning Award</span>
-              </div>
-            </div>
-
-            {/* Social Icons */}
-            <div className="absolute bottom-8 left-8 flex space-x-3 text-gray-500 z-10">
-              <a href="#"style={{backgroundColor:'#302929'}} className=" text-white p-2 rounded-full shadow-md flex items-center justify-center w-8 h-8 text-sm"><i className="fa-brands fa-x-twitter text-white text-md"></i></a>
-              <a href="#"style={{backgroundColor:'#302929'}} className="text-white p-2 rounded-full shadow-md flex items-center justify-center w-8 h-8 text-sm"><i className="fab fa-dribbble text-white text-md"></i>
-</a>
-              <a href="#" style={{backgroundColor:'#302929'}}className="text-white p-2 rounded-full shadow-md flex items-center justify-center w-8 h-8 text-sm"><i className="fab fa-instagram text-white text-md"></i></a>
-            </div>
+          {/* 🟣 Social Icons */}
+          <div className="absolute bottom-6 left-6 flex space-x-3 text-gray-500 z-30">
+            <a
+              href="#"
+              className="bg-[#302929] text-white p-2 rounded-full shadow-md flex items-center justify-center w-8 h-8"
+            >
+              <i className="fa-brands fa-x-twitter"></i>
+            </a>
+            <a
+              href="#"
+              className="bg-[#302929] text-white p-2 rounded-full shadow-md flex items-center justify-center w-8 h-8"
+            >
+              <i className="fab fa-dribbble"></i>
+            </a>
+            <a
+              href="#"
+              className="bg-[#302929] text-white p-2 rounded-full shadow-md flex items-center justify-center w-8 h-8"
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
           </div>
         </div>
-        <div className="py-16 px-4 sm:px-6 lg:px-8 font-inter flex justify-center"> {/* Added font-inter and centering */}
-          <div className="max-w-xl text-gray-800 text-center lg:text-left"> {/* Max width for content, text alignment */}
-            {/* Bio Header */}
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">The Founder</h2>
-              <p className="text-gray-700 leading-relaxed text-base">
-                Franklin Clinton is a visual designer focused on crafting bold, functional design systems. He works
-                with creative teams and startups to build standout brands and seamless digital experiences. Based in
-                London, he balances clarity with character — and enjoys experimenting with motion design and
-                interactive visuals in his spare time.
-              </p>
+
+        {/* Right Column - Text Content */}
+        <div className="max-w-xl text-center py-5 px-16 lg:text-left z-20 mt-16 lg:mt-7">
+          <h2 className="text-4xl font-bold text-gray-900 mb-7">The Founder</h2>
+          <p className="text-gray-600 text-xl font-normal font-sans leading-7">
+            Franklin Clinton is a visual designer focused on crafting bold, functional
+            design systems. He works with creative teams and startups to build standout
+            brands and seamless digital experiences. Based in London, he balances clarity
+            with character — and enjoys experimenting with motion design and interactive
+            visuals in his spare time.
+          </p>
+
+          <hr className="border-t border-gray-400 my-14 max-w-lg mx-auto lg:mx-0" />
+
+          {/* Experience List */}
+          <div className="space-y-8 text-sm">
+            <div className="flex justify-between items-center">
+              <span className="font-bold text-gray-600">Founder at Agero</span>
+              <span className="text-gray-500">2024–Now</span>
             </div>
-
-            {/* Divider Line */}
-            <hr className="border-t border-gray-300 my-8 mx-auto lg:mx-0 max-w-lg" /> {/* mx-auto for centering on small screens */}
-
-            {/* Experience List */}
-            <div className="space-y-4 text-sm">
-              <div className="flex justify-between items-center">
-                <span className="font-semibold text-gray-800">Founder at Agero</span>
-                <span className="text-gray-600">2024-Now</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="font-semibold text-gray-800">Brand Designer at Google</span>
-                <span className="text-gray-600">2023-2024</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="font-semibold text-gray-800">Web Designer at Shopify</span>
-                <span className="text-gray-600">2018-2023</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="font-semibold text-gray-800">Junior Designer at Meta</span>
-                <span className="text-gray-600">2015-2018</span>
-              </div>
+            <div className="flex justify-between items-center">
+              <span className="font-bold text-gray-600">Brand Designer at Google</span>
+              <span className="text-gray-500">2023–2024</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="font-bold text-gray-600">Web Designer at Shopify</span>
+              <span className="text-gray-500">2018–2023</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="font-bold text-gray-600">Junior Designer at Meta</span>
+              <span className="text-gray-500">2015–2018</span>
             </div>
           </div>
         </div>
@@ -94,4 +127,4 @@ const FounderCard = () => {
   );
 };
 
-export default FounderCard;
+export default FounderSection;
