@@ -20,7 +20,7 @@ const AccordionItem = ({ faq, isOpen, toggleAccordion }) => {
   return (
     <div 
       className={`
-        bg-white 
+        bg-[#f0f0f0] 
         p-5 md:p-6 
         rounded-xl 
         shadow-sm 

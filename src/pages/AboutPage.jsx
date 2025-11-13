@@ -5,18 +5,19 @@ import About from '../components/About'
 import AwardsWinning from '../components/AwardsWinning'
 import FAQSection from '../components/FAQSection'
 import LetsConnect from '../components/LetsConnect'
-
+import Foundercard from '../components/FounderCard'
 
 const AboutPage = () => {
   return (
     <div>
-      <Hero/>
-      <About/>
-      <MarqueeSection/>
-      <AwardsWinning/>
-      <FAQSection/>
-      <LetsConnect/>
-      
+      <Hero />
+      <About />
+      <Foundercard />
+      <MarqueeSection />
+      <AwardsWinning />
+      <FAQSection />
+      <LetsConnect />
+
     </div>
   )
 }
