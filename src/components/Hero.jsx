@@ -3,12 +3,14 @@ import React from "react";
 import p1 from "../assets/p1.png";
 import p2 from "../assets/p2.webp";
 import p3 from "../assets/p3.avif";
-
-
+import london from "../assets/london.png";
+import starup from "../assets/startup.png";
+// import designIcon from "../assets/design-icon.jpg"; // ✅ FIXED
 
 const Hero = () => {
   return (
     <section className="bg-[#f3f3f3] text-center py-24 px-6 md:px-12 relative overflow-hidden">
+
       {/* Top Section - Trusted by Founders */}
       <div className="flex justify-center items-center gap-3 mb-8">
         <div className="flex -space-x-3">
@@ -32,29 +34,31 @@ const Hero = () => {
       </div>
 
       {/* Heading */}
-      <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
-        Effortless{" "}
-        <span className="text-orange-600 relative">
-          Design
-          <img
-            src="/design-icon.jpg"
-            alt="Design Icon"
-            className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full object-cover -z-10 opacity-90"
-          />
-        </span>
-        <br />
-        for <span className="text-gray-800">Design Startups</span>
-        <br />
-        based in{" "}
-        <span className="text-gray-900 relative">
-          London, UK
-          <img
-            src="/london.jpg"
-            alt="London"
-            className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full object-cover -z-10 opacity-90"
-          />
-        </span>
-      </h1>
+<h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-6 flex flex-col items-center gap-2">
+
+  {/* LINE 1 */}
+  <div className="flex items-center gap-3">
+    <span>Effortless</span>
+    <img src={p2} className="w-20 h-16 rounded-full object-cover" />
+    <span className="text-orange-600">Design</span>
+  </div>
+
+  {/* LINE 2 */}
+  <div className="flex items-center gap-3">
+    <span className="text-gray-700">for</span>
+    <img src={starup} className="w-20 h-16 rounded-full object-cover" />
+    <span>Design Startups</span>
+  </div>
+
+  {/* LINE 3 */}
+  <div className="flex items-center gap-3">
+    <span>based in</span>
+    <span className="text-gray-900 font-bold">London,</span>
+    <img src={london} className="w-20 h-16 rounded-full object-cover" />
+    <span>UK</span>
+  </div>
+</h1>
+
 
       {/* Description */}
       <p className="max-w-2xl mx-auto text-gray-600 text-base md:text-lg leading-relaxed mb-10">
@@ -67,6 +71,7 @@ const Hero = () => {
         View Plans
         <span className="text-lg">→</span>
       </button>
+
     </section>
   );
 };
