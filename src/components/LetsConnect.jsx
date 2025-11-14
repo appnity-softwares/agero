@@ -116,10 +116,10 @@ export default function LetsConnect() {
       <style jsx>{`
   @keyframes marquee {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    100% { transform: translateX(-100%) ; }
   }
   .animate-marquee {
-    animation: marquee 20s linear infinite;
+    animation: marquee 50s infinite linear ;
   }
 `}</style>
     </div>
