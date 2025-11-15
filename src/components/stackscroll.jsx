@@ -30,7 +30,6 @@ const StickyCardsSection = () => {
     }
     requestAnimationFrame(raf);
 
-    // 💫 GSAP scroll + fade + scale pin animation
     const ctx = gsap.context(() => {
       cardRefs.current.forEach((card, index) => {
         if (!card) return;
