@@ -137,6 +137,7 @@ const ServiceCardTemplate = () => {
             </p>
           </div>
         </div>
+        
 
         {/* Tags */}
         <div className="flex justify-center gap-3 mt-12 flex-wrap">

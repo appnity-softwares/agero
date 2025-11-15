@@ -59,7 +59,7 @@ export default function ServicesCarousel() {
 
         {/* Navigation Tabs */}
         <div
-          className="flex justify-between items-center border-t border-gray-400 pt-6 md:text-sm"
+          className="flex justify-between items-center border-t border-gray-400 pt-6 md:text-sm text-xs"
 
         >
           {services.map((service, index) => (

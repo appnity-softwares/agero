@@ -9,21 +9,20 @@ const About = () => {
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-[#e6e6e6] text-center px-5 mb-28">
+    <section className="flex flex-col items-center justify-center min-h-screen bg-[#dbdbdb] text-center px-5 py-20 md:py-32 mb-20">
+
       {/* Small orange hello text */}
       <p
-        className="text-orange-600 text-3xl font-normal mb-8 font-cursive"
+        className="text-orange-600 text-2xl md:text-3xl font-normal mb-6 md:mb-8 font-cursive"
         data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
       >
         (hello)
       </p>
 
       {/* Main heading */}
       <h1
-        className="text-4xl md:text-5xl font-bold leading-tight text-black max-w-4xl font-sans"
-
+        data-aos="fade-up"
+        className="text-[8vw] md:text-5xl lg:text-6xl font-bold leading-tight text-black max-w-4xl font-sans"
       >
         We help fast moving digital startups <br />
         launch sharper brands and websites — <br />
@@ -32,30 +31,25 @@ const About = () => {
           <span className="text-gray-500 font-normal">and no drama.</span>
         </span>
       </h1>
-      <div className="container" data-aos="fade-right"
-        data-aos-delay="300" >
-        {/* First row: 3 buttons */}
-        <div
-          className="flex flex-wrap justify-center gap-3 mt-10"
 
-        >
-          <Button name="branding01" icon="fas fa-globe" />
-          <Button icon="fas fa-globe" name="Logo" />
-          <Button icon="fas fa-desktop " name="Website" />
-
+      {/* Buttons Container */}
+      <div
+        className="mt-10 md:mt-14 w-full max-w-2xl mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        {/* First row */}
+        <div className="flex flex-wrap justify-center gap-3">
+          <Button name="Branding01" icon="fas fa-globe" />
+          <Button name="Logo" icon="fas fa-globe" />
+          <Button name="Website" icon="fas fa-desktop" />
         </div>
 
-        {/* Second row: 3 buttons */}
-        <div
-          className="flex flex-wrap justify-center gap-3 mt-6"
-
-        >
-
+        {/* Second row */}
+        <div className="flex flex-wrap justify-center gap-3 mt-4">
           <Button name="Illustration" icon="fas fa-paint-brush" />
           <Button name="Interface" icon="fas fa-bullseye" />
           <Button name="Strategy" icon="fas fa-lightbulb" />
-
-
         </div>
       </div>
     </section>
