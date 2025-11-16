@@ -26,7 +26,7 @@ export default function LetsConnect() {
       </div>
 
       {/* FORM SECTION */}
-<div className="relative mt-[-6rem] sm:mt-[-8rem] w-auto z-10 lg:mx-3 lg:mt-[-12rem]">
+<div className="relative mt-[-6rem] sm:mt-[-8rem] w-auto z-10 lg:mx-3 lg:mt-[-12rem] mx-2">
 
   <div
     className="w-full min-h-[600px] bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden 
