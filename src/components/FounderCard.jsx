@@ -2,7 +2,7 @@ import React from "react";
 
 const FounderSection = () => {
   return (
-    <div className="relative bg-[#dbdbdb] py-20 font-inter overflow-hidden">
+    <div className="relative bg-[#dbdbdb] py-16 font-inter overflow-hidden">
       {/* 🔹 Subtitle */}
       <p className="text-center text-gray-500 text-sm md:text-base tracking-wide mb-10 md:mb-20 relative z-10">
         (intro)
