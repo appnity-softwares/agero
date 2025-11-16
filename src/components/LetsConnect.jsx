@@ -109,7 +109,6 @@ export default function LetsConnect() {
             </div>
             }
           </div>
-
         </div>
       </div>
 
