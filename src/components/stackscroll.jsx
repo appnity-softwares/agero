@@ -77,7 +77,7 @@ const StickyCardsSection = () => {
         <h1
           className="
             absolute top-[10%] left-1/2 -translate-x-1/2 
-            text-[18vw] md:text-[13vw] font-semibold leading-none 
+            text-[14vw] md:text-[13vw] font-semibold leading-none 
             bg-gradient-to-b from-[rgba(22,22,22,0.83)] via-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0)]
             bg-clip-text text-transparent opacity-40 z-10 
             whitespace-nowrap select-none
