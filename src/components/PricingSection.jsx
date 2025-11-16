@@ -89,17 +89,17 @@ const PricingSection= () => {
   }, []);
 
   return (
-    <div className="bg-[#dbdbdb] min-h-screen flex flex-col items-center pt-20  pb-40 font-[Inter]">
+    <div className="bg-[#dbdbdb] min-h-screen flex flex-col items-center pt-20  pb-40 font-['sans-serif'] ">
       {/* Header */}
-      <header className="mb-20 text-center">
-        <p className="text-neutral-600 mb-2 font-medium">(Pricing Plan)</p>
-        <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 leading-tight">
-          Explore Pricing
+<header className="-mb-28 sm:mb-10 md:mb-20 text-center px-4">
+        <p className="text-neutral-700 mb-2 font-serif">(Pricing Plan)</p>
+        <h1 className="text-4xl md:text-7xl font-sans  text-neutral-950 leading-tight">
+          <b>Explore Pricing</b>
         </h1>
       </header>
 
       {/* Cards Container */}
-      <main ref={cardContainerRef} className="w-[90vw]  max-w-4xl mx-auto">
+      <main ref={cardContainerRef} className="w-[90vw]  max-w-3xl mx-auto">
         {plans.map((plan, index) => (
           <div
             key={plan.id}
@@ -121,7 +121,7 @@ const PricingSection= () => {
             <div
               className={`bg-gradient-to-br ${plan.gradient} ${plan.textColor}
                 grid grid-cols-1 lg:grid-cols-2 items-stretch p-8 md:p-10 rounded-3xl
-                overflow-hidden h-full mt-32
+                overflow-hidden h-full mt-28
               `}
             >
               {/* Left Section */}
