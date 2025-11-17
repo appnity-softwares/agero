@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Button from "./button";
+import ScrollWordReveal from "./effect/ParagraphColorFade";
 
 const About = () => {
   useEffect(() => {
@@ -20,6 +21,11 @@ const About = () => {
       </p>
 
       {/* Main heading */}
+
+<ScrollWordReveal
+  text="Effortless Design for Startups based in London UK"
+  className="text-5xl font-bold leading-tight"
+/>
       <h1
         data-aos="fade-up"
         className="text-[8vw] md:text-5xl lg:text-6xl font-bold leading-tight text-black max-w-4xl font-sans"
