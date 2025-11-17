@@ -4,6 +4,8 @@ import p2 from "../assets/p2.webp";
 import p3 from "../assets/p3.avif";
 import london from "../assets/london.png";
 import starup from "../assets/startup.png";
+import BlurText from "./effect/BlurText.jsx";  // ya correct path
+
 
 const Hero = () => {
   return (
@@ -23,7 +25,13 @@ const Hero = () => {
       <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-6 flex flex-col items-center gap-3">
 {/* LINE 1 */}
 <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3">
-  <span>Effortless</span>
+  {/* <span>Effortless</span> */}
+  <BlurText
+  text="Effortless "
+  className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-center"
+  animateBy="words"
+  direction="top"
+/>
 
   {/* Image only on big screens */}
   <img
@@ -31,7 +39,12 @@ const Hero = () => {
     className="hidden sm:block w-20 h-16 rounded-full object-cover"
   />
 
-  <span className="text-orange-600">Design</span>
+  <span className="text-orange-600"><BlurText
+  text="Design "
+  className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-center"
+  animateBy="words"
+  direction="top"
+/></span>
 </div>
 
 {/* LINE 2 */}
@@ -44,13 +57,30 @@ const Hero = () => {
     className="hidden sm:block w-20 h-16 rounded-full object-cover"
   />
 
-  <span>Design Startups</span>
+  <span><BlurText
+  text="Design Startups"
+  className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-center"
+  animateBy="words"
+  direction="top"
+/></span>
 </div>
 
 {/* LINE 3 */}
 <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3">
-  <span>based in</span>
-  <span className="text-gray-900 font-bold">London,</span>
+  <span><BlurText
+  text="based in"
+  className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-center"
+  animateBy="words"
+  direction="top"
+/>
+</span>
+  <span className="text-gray-900 font-bold"><BlurText
+  text="London,"
+  className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-center"
+  animateBy="words"
+  direction="top"
+/>
+</span>
 
   {/* Image only on big screens */}
   <img
@@ -58,7 +88,13 @@ const Hero = () => {
     className="hidden sm:block w-20 h-16 rounded-full object-cover"
   />
 
-  <span>UK</span>
+  <span><BlurText
+  text="UK"
+  className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-center"
+  animateBy="words"
+  direction="top"
+/>
+</span>
 </div>
 
       </h1>
