@@ -19,24 +19,19 @@ const About = () => {
       >
         (hello)
       </p>
+ 
 
-      {/* Main heading */}
-
+{/* Animated Main Heading */}
 <ScrollWordReveal
-  text="Effortless Design for Startups based in London UK"
-  className="text-5xl font-bold leading-tight"
+  text={
+    `We help fast moving digital startups 
+     launch sharper brands and websites — 
+     with clarity, speed, and no drama.`
+  }
+  className="text-[8vw] md:text-3xl lg:text-5xl font-bold leading-tight text-black max-w-4xl font-sans justify-center"
+  dataAos="fade-up"
 />
-      <h1
-        data-aos="fade-up"
-        className="text-[8vw] md:text-5xl lg:text-6xl font-bold leading-tight text-black max-w-4xl font-sans"
-      >
-        We help fast moving digital startups <br />
-        launch sharper brands and websites — <br />
-        <span className="font-normal text-gray-800">
-          with clarity, <span className="font-semibold text-black">speed,</span>{" "}
-          <span className="text-gray-500 font-normal">and no drama.</span>
-        </span>
-      </h1>
+
 
       {/* Buttons Container */}
       <div
@@ -46,7 +41,7 @@ const About = () => {
       >
         {/* First row */}
         <div className="flex flex-wrap justify-center gap-3">
-          <Button name="Branding01" icon="fas fa-globe" />
+          <Button name="Branding01" icon="fa-solid fa-globe" />
           <Button name="Logo" icon="fas fa-globe" />
           <Button name="Website" icon="fas fa-desktop" />
         </div>
