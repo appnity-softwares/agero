@@ -6,7 +6,7 @@ import AwardsWinning from '../components/AwardsWinning'
 import FAQSection from '../components/FAQSection'
 import LetsConnect from '../components/LetsConnect'
 import Foundercard from '../components/FounderCard'
-
+import Tool from '../components/Toolspower'
 const AboutPage = () => {
   return (
     <div>
@@ -14,6 +14,7 @@ const AboutPage = () => {
       <About />
       <Foundercard />
       <MarqueeSection />
+      <Tool />
       <AwardsWinning />
       <FAQSection />
       <LetsConnect />

@@ -6,12 +6,12 @@ const FounderSection = () => {
     useEffect(() => {
     AOS.init({
       duration: 800,
-      once: true,       // 🔥 Animation runs ONLY on scroll down!
+      once: true,        
       easing: "ease-out",
     });
   }, []);
   return (
-    <div className="relative bg-[#dbdbdb] py-16 font-inter overflow-hidden">
+    <div className="relative -mt-24 bg-[#dbdbdb] py-16 font-inter overflow-hidden">
       {/* 🔹 Subtitle */}
       <p className="text-center text-gray-500 text-sm md:text-base tracking-wide mb-10 md:mb-20 relative z-10">
         (intro)
