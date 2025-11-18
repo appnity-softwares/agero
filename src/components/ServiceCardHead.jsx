@@ -1,4 +1,5 @@
 import React from 'react'
+import BlurText from "./effect/BlurText.jsx";  // ya correct path
 
 const ServiceCardHead = () => {
   return (
@@ -8,7 +9,14 @@ const ServiceCardHead = () => {
         {/* Header */}
         <div className="mb-10">
           <p className="text-gray-500 text-sm mb-0 px-28">(Services)</p>
-          <h1 className="text-6xl md:text-6xl font-bold text-black px-28 typewriter ">What we do</h1>
+          
+          <h1 className="text-6xl md:text-6xl font-bold text-black px-28 typewriter ">
+            <BlurText
+              text="What we do"
+              className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-center"
+              animateBy="words"
+              direction="top"
+            /></h1>
         </div>
        
       </div>
