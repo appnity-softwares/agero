@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FounderSection = () => {
+    useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,       // 🔥 Animation runs ONLY on scroll down!
+      easing: "ease-out",
+    });
+  }, []);
   return (
     <div className="relative bg-[#dbdbdb] py-16 font-inter overflow-hidden">
       {/* 🔹 Subtitle */}
@@ -33,8 +42,8 @@ const FounderSection = () => {
       <div className="relative z-10 container mx-auto flex flex-col lg:flex-row justify-center items-center lg:items-start gap-20 md:gap-32 px-4 sm:px-6 md:px-10">
         
         {/* Left Column */}
-        <div className="relative w-full max-w-[350px] sm:max-w-[400px] md:max-w-[450px] z-20 mt-10 md:mt-14 lg:mt-7">
-          <div className="relative rounded-2xl overflow-hidden image-with-half-blur-scoped">
+        <div className="relative w-full max-w-[350px] sm:max-w-[400px] md:max-w-[450px] z-20 mt-10 md:mt-14 lg:mt-7"data-aos="fade-right">
+          <div className="relative rounded-2xl overflow-hidden image-with-half-blur-scoped" >
             <img
               src="https://framerusercontent.com/images/cdiudTEW8MSbl2008vSYXSq9ndI.png?scale-down-to=1024"
               alt="Franklin Clinton"
@@ -71,12 +80,12 @@ const FounderSection = () => {
         </div>
 
         {/* Right Column */}
-        <div className="max-w-xl text-center lg:text-left z-20 mt-10 md:mt-14 px-4 sm:px-10">
+        <div className="max-w-xl text-center lg:text-left z-20 mt-10 md:mt-14 px-4 sm:px-10" data-aos="fade-up">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             The Founder
           </h2>
 
-          <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-6 sm:leading-7 text-justify">
+          <p className="text-gray-600 text-base sm:text-lg md:text-md leading-6 sm:leading-7 text-justify" >
             Franklin Clinton is a visual designer focused on crafting bold, functional
             design systems. He works with creative teams and startups to build standout
             brands and seamless digital experiences. Based in London, he balances clarity

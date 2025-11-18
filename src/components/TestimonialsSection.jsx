@@ -76,7 +76,7 @@ const TestimonialsCarousel = () => {
 
   {/* Massive Background Heading */}
   <h1
-    className="absolute top-[6%] md:top-[9%] left-1/2 -translate-x-1/2
+    className="absolute top-[6%] md:top-[5%] left-1/2 -translate-x-1/2
     text-[18vw] md:text-[12rem] lg:text-[13rem] font-bold 
     tracking-tight leading-[0.85]
     bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)]

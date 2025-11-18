@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Section2 = () => {
+
+      useEffect(() => {
+      AOS.init({
+        duration: 800,
+        once: true,       // 🔥 Animation runs ONLY on scroll down!
+        easing: "ease-out",
+      });
+    }, []);
   const logos = [
     "https://framerusercontent.com/images/3cWSgJFsUVvZeOw9LdQmTOSVFhE.svg?width=58&height=32",
     "https://framerusercontent.com/images/nfabfL1KTOOmw22T9soWodkE5Q.svg?width=127&height=32",
@@ -13,7 +23,7 @@ const Section2 = () => {
   return (
     <div className="bg-[#ffffff]   lg:px-2 rounded-2xl">
       {/* 🔹 Top Image Section */}
-      <div>
+      <div data-aos="fade-out"  >
         <img
           src="https://framerusercontent.com/images/dT5S1njJpyHvznBNeTmMAwfBcqQ.png?scale-down-to=2048&width=2848&height=1604"
           alt="Design Showcase"
