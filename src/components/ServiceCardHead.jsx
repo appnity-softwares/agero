@@ -30,7 +30,7 @@ const ServiceCardHead = () => {
     opacity: 0;
     filter: blur(15px);
     animation: fadeBlurIn 0.6s ease forwards, typing 2s    ;
-  }
+  }   
 
   @keyframes fadeBlurIn {
     0% {
