@@ -6,7 +6,7 @@ const FounderSection = () => {
     useEffect(() => {
     AOS.init({
       duration: 800,
-      once: true,       // 🔥 Animation runs ONLY on scroll down!
+      once: true,        
       easing: "ease-out",
     });
   }, []);

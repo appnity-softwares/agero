@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Check, ArrowRight, Square } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const plans = [
   {

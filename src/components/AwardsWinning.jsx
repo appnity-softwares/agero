@@ -57,8 +57,8 @@ const AwardsWinning = () => {
   return (
 <section className="bg-[#dbdbdb] py-20 md:py-28 font-['Plus_Jakarta_Sans']">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* smalll lable */}
         
-        {/* Small Label */}
         <p className="text-center text-[12px] sm:text-[13px] text-gray-500 mb-2 tracking-wide">
           (Awards)
         </p>
