@@ -26,7 +26,7 @@ const plans = [
   },
   {
     id: 2,
-    name: "Premium Plan",
+    name: "Premium Plans",
     price: "Starting at $1000",
     period: "",
     description:
