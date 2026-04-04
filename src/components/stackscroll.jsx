@@ -1,11 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "@studio-freight/lenis";
 
-import img2 from "../assets/stack2.png";
-import img3 from "../assets/stack3.png";
-import img5 from "../assets/stack5.png";
+import img2 from "../assets/brainwavescale.avif";
+import img3 from "../assets/growthhubscale.avif";
+import img5 from "../assets/cgsadi.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,18 +16,6 @@ const StickyCardsSection = () => {
   // ✨ Smooth Scroll + GSAP Animation
   // ----------------------------------------------
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      smooth: true,
-      direction: "vertical-right",
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
     const ctx = gsap.context(() => {
       cardRefs.current.forEach((card, index) => {
         if (!card) return;
@@ -63,35 +50,36 @@ const StickyCardsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#dbdbdb] overflow-hidden py-16 md:py-24"
+      className="relative bg-[#dbdbdb] overflow-hidden py-14 md:py-24"
     >
-      {/* ------------------------------------------ */}
-      {/* Mini Subtitle */}
-      {/* ------------------------------------------ */}
-      <p className="text-center text-gray-600 text-xs sm:text-sm md:text-base tracking-wide mb-2 relative z-10">
-        (Why clients love Agero)
-      </p>
+
 
       {/* Big Title */}
-      <div className="flex justify-center items-center min-h-[22vh] relative">
-        <h1
+      <div className="flex justify-center items-center h-[18vh] sm:h-[20vh] md:h-[22vh] relative">
+        <h2
           className="
-            absolute top-[10%] left-1/2 -translate-x-1/2 
-            text-[14vw] md:text-[13vw] font-semibold leading-none 
-            bg-gradient-to-b from-[rgba(22,22,22,0.83)] via-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0)]
-            bg-clip-text text-transparent opacity-40 z-10 
+            absolute left-1/2 -translate-x-1/2
+            text-[18vw] sm:text-[18vw] md:text-[13vw] lg:text-[10vw]
+            top-[40%] sm:top-[11%] md:top-[7%]
+            font-semibold leading-none
+            bg-gradient-to-b from-black/80 via-black/30 to-transparent
+            bg-clip-text text-transparent opacity-40
             whitespace-nowrap select-none
           "
         >
-          Recent Works
-        </h1>
+          Momentum
+        </h2>
       </div>
 
       {/* ------------------------------------------ */}
       {/* Cards Loop */}
       {/* ------------------------------------------ */}
       <div className="flex flex-col gap-40 py-1">
-        {[img3, img2, img5].map((img, i) => (
+        {[
+          { src: img3, title: "Growth Hub", year: "2025", role: "Website Designer" },
+          { src: img2, title: "Brainwave", year: "2024", role: "Product Design" },
+          { src: img5, title: "CGSADI", year: "2025", role: "Development" }
+        ].map((project, i) => (
           <div
             key={i}
             ref={(el) => (cardRefs.current[i] = el)}
@@ -100,15 +88,17 @@ const StickyCardsSection = () => {
             {/* BACKGROUND BLUR */}
             <div
               className="
-                  absolute inset-0 rounded-3xl overflow-hidden bg-black/60
+                  absolute inset-0 rounded-3xl overflow-hidden bg-black/60 object-cover
                   h-[120vh]          /* mobile big */
                   sm:h-[130vh]       /* small tablet bigger */
-                 md:h-full          /* desktop normal */
+                  md:h-full          /* desktop normal */
                       "
-                  >
+            >
               <img
-                src={img}
+                src={project.src}
                 alt=""
+                loading="lazy"
+                role="presentation"
                 className="
                     w-full h-full object-cover scale-110 blur-[25px] opacity-80"
               />
@@ -135,8 +125,9 @@ const StickyCardsSection = () => {
               "
             >
               <img
-                src={img}
-                alt={`Project ${i + 1}`}
+                src={project.src}
+                alt={`${project.title} Preview`}
+                loading="lazy"
                 className="
                   w-full h-full object-cover object-center
                   scale-110 md:scale-100
@@ -155,10 +146,22 @@ const StickyCardsSection = () => {
                 md:hidden
               "
             >
-              <p className="text-[11px] leading-relaxed opacity-80 max-w-[85%] sm:max-w-[70%]">
+              <p
+                className="
+    text-[10px] sm:text-[12px] md:text-sm
+    leading-relaxed sm:leading-normal
+    opacity-80
+
+    max-w-[85%] sm:max-w-[70%] md:max-w-[60%]
+
+    sm:text-start        /* Tablet → text-align: start */
+    md:pr-[73px]         /* Tablet → padding-right: 73px */
+  "
+              >
                 We’ve helped businesses across industries achieve their goals.
                 Here are some of our selected works.
               </p>
+
 
               <p className="text-[11px] tracking-wider opacity-70">
                 {String(i + 1).padStart(2, "0")} / 03
@@ -167,7 +170,7 @@ const StickyCardsSection = () => {
               <div className="w-[35px] h-[1px] bg-white/40"></div>
 
               <h3 className="text-4xl sm:text-5xl font-semibold leading-none">
-                {i % 2 === 0 ? "Archin" : "VNTNR"}
+                {project.title}
               </h3>
             </div>
 
@@ -189,7 +192,7 @@ const StickyCardsSection = () => {
                 <p className="text-[11px] text-white/60 tracking-widest">
                   Year
                 </p>
-                <p className="text-xl font-bold leading-tight mt-1">2025</p>
+                <p className="text-xl font-bold leading-tight mt-1">{project.year}</p>
               </div>
 
               {/* ROLE */}
@@ -197,7 +200,7 @@ const StickyCardsSection = () => {
                 <p className="text-[11px] text-white/60 tracking-widest">
                   Role
                 </p>
-                <p className="text-sm font-medium mt-0.5">Lead Designer</p>
+                <p className="text-sm font-medium mt-0.5">{project.role}</p>
               </div>
 
               {/* SERVICES */}
@@ -234,15 +237,15 @@ const StickyCardsSection = () => {
                   {String(i + 1).padStart(2, "0")} / 03
                 </p>
 
-                <h3 className="text-6xl font-semibold text-white">
-                  {i % 2 === 0 ? "Archin" : "VNTNR"}
+                <h3 className="text-2xl font-semibold text-white">
+                  {project.title.toUpperCase()}
                 </h3>
               </div>
             </div>
 
             <div
               className="
-                absolute right-[20%] top-1/2 -translate-y-1/2 
+                absolute right-[15%] top-1/2 -translate-y-1/2 
                 z-20 hidden md:flex flex-col justify-between h-[60vh]
                 text-gray-200
               "
@@ -251,7 +254,7 @@ const StickyCardsSection = () => {
                 <p className="text-sm opacity-60 uppercase tracking-widest">
                   Year
                 </p>
-                <p className="text-2xl font-bold mt-1">2023</p>
+                <p className="text-2xl font-bold mt-1">{project.year}</p>
               </div>
 
               <div>
@@ -259,7 +262,7 @@ const StickyCardsSection = () => {
                   Role
                 </p>
                 <p className="text-lg font-semibold text-white">
-                  Website Designer
+                  {project.role}
                 </p>
               </div>
 

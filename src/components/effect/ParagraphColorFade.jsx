@@ -11,7 +11,7 @@ export default function ScrollWordReveal({ text, className = "" }) {
   });
 
   return (
-    <h1 ref={ref} className={className + " flex flex-wrap gap-2"}>
+    <h2 ref={ref} className={className + " flex flex-wrap gap-2"}>
       {words.map((word, i) => {
         // Har word ka progress alag banate hain
         const start = i / words.length;
@@ -20,7 +20,7 @@ export default function ScrollWordReveal({ text, className = "" }) {
         const color = useTransform(
           scrollYProgress,
           [start, end],
-          ["#9ca3af", "#000000"] // light gray → black
+          ["#4b5563", "#000000"] // darker gray → black
         );
 
         return (
@@ -33,6 +33,6 @@ export default function ScrollWordReveal({ text, className = "" }) {
           </motion.span>
         );
       })}
-    </h1>
+    </h2>
   );
 }

@@ -2,16 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 
 body {
-    font-family: sans-serif; /* Or your preferred font */
+  font-family: sans-serif;
+  /* Or your preferred font */
 }
+
 .font-cursive {
   font-family: 'Pacifico', cursive;
 }

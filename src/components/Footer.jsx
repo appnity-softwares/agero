@@ -1,8 +1,10 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import third from "../assets/third3.png";
 export default function AgeroFooter() {
+  let today = new Date().getDate() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getFullYear();
   return (
-    <div className="min-h-screen p-4 bg-[#dbdbdb]">
+    <div className="min-h-screen p-2 bg-[#dbdbdb]">
       <footer className="relative min-h-screen overflow-hidden rounded-3xl">
 
         {/* ✅ Background Layer */}
@@ -48,8 +50,8 @@ export default function AgeroFooter() {
               <div>
                 <h3 className="text-gray-400 text-xs uppercase mb-3 tracking-wider">Legals</h3>
                 <ul className="space-y-2 text-2xl sm:text-2xl font-bold py-3">
-                  <li><a href="#privacy" className="text-white hover:text-orange-400">Privacy Policy</a></li>
-                  <li><a href="#terms" className="text-white hover:text-orange-400">Terms of Service</a></li>
+                  <li><Link to="/privacy-policy" className="text-white hover:text-orange-400">Privacy Policy</Link></li>
+                  <li><Link to="/terms-of-service" className="text-white hover:text-orange-400">Terms of Service</Link></li>
                 </ul>
               </div>
 
@@ -60,7 +62,7 @@ export default function AgeroFooter() {
           <div className="relative flex flex-col items-center pb-40 sm:pb-52 md:pb-60">
 
             {/* Glow Background */}
- 
+
 
             {/* Bottom Info */}
             <div className="w-full px-4">
@@ -71,22 +73,34 @@ export default function AgeroFooter() {
                 text-gray-400 text-sm gap-4
                 mb-40 sm:mb-60 text-center sm:text-left lg:items-baseline
               ">
-                <p className="flex-1">© 2025 Agero. All rights reserved.</p>
-                <p className="flex-1">London — 00:55:47</p>
-                <a href="#top" className="flex-1 text-orange-400 hover:text-orange-300  lg:[pl-32]">
+                <p className="flex-1">© 2025 Appnity. All rights reserved.</p>
+                <p className="flex-1">India — {today}</p>
+                <a href="#head" className="flex-1 z-30 text-orange-400 hover:text-orange-300  lg:[pl-32]">
                   Back to top
                 </a>
               </div>
             </div>
 
             {/* Logo */}
-<div className=" absolute inset-0  flex justify-center items-end  z-10  mb-4 sm:mb-1 md:mb-28 lg:mb-0">
-  <img src="https://framerusercontent.com/images/sjs3fZE4r5WdP6GdjWJGvK4dPgw.png"alt="Agero Logo"
-      className=" w-[95%]  sm:w-[70%]  md:w-[75%]  lg:w-[80%]  object-contain  rounded-3xl"/>
+            <div className="absolute inset-0 flex justify-center items-end z-10 mb-4 sm:mb-1 md:mb-28 lg:mb-0">
+              <img
+                src={third}
+                alt="appnity Logo"
+                className="
+      w-[95%]
+      sm:w-[70%]
+      md:w-[75%]
+      lg:w-[100%]
+      lg:h-[50%]
+      object-cover
+      rounded-3xl
+    "
+              />
 
-  {/* Blurry bottom fade */}
-<div className="backdrop-blur-sm absolute bottom-0 left-0 h-5 sm:h-12 md:h-20 lg:h-20 w-full mb-1 sm:mb-1 md:mb-6 lg:mb-0"></div>
-</div>
+              {/* Blurry bottom fade */}
+              <div className="backdrop-blur-sm absolute bottom-0 left-0 h-5 sm:h-12 md:h-20 lg:h-20 w-full mb-1 sm:mb-1 md:mb-6 lg:mb-0"></div>
+            </div>
+
 
 
           </div>
